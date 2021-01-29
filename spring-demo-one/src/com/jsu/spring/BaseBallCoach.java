@@ -5,9 +5,15 @@ public class BaseBallCoach implements Coach
 	// Define a private field for the dependency
 	private FortuneService fortuneService;
 	
+	public BaseBallCoach()
+	{
+		
+	}
+	
 	// Define a constructor for dependency injection
 	public BaseBallCoach(FortuneService theFortuneService)
 	{
+		super();
 		fortuneService = theFortuneService;
 	}
     @Override
