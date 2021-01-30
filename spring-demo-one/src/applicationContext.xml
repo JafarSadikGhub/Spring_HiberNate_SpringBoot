@@ -22,6 +22,9 @@
           class="com.jsu.spring.CricketCoach">
           <!-- Setup setter injection -->
           <property name="fortuneService" ref ="myFortune" />
+          <!-- literal values injection -->
+          <property name="emailAddress" value="jsu@ksu.com" />
+          <property name="team" value="Sunrisers Hyderabad" />
     </bean>
     
 </beans>
