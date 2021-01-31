@@ -21,6 +21,10 @@
         <!-- Set up constructor injection -->
         <constructor-arg ref="myFortune" />
     </bean>  
+    <bean id="myLoggerConfig" class="com.jsu.spring.MyLoggerConfig" init-method="initLogger">
+    	<property name="rootLoggerLevel" value="FINE" />
+    	<property name="printedLoggerLevel" value="FINE"/>
+    </bean>
     <bean id="myCricketCoach"
           class="com.jsu.spring.CricketCoach">
           <!-- Setup setter injection -->
