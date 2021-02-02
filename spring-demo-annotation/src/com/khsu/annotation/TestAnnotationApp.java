@@ -11,6 +11,7 @@ public class TestAnnotationApp {
 		// Calling by default component name...
 		Coach theCoach = context.getBean("batmintonCoach", Coach.class);
 		System.out.println("Do it: " + theCoach.getDailyWorkout());
+		System.out.println(theCoach.getDailyFortune());
 		context.close();
 	}
 }
