@@ -1,7 +1,7 @@
 package com.khsu.annotation;
 
+import org.graalvm.compiler.lir.CompositeValue.Component;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 /*Use default component names. If we make it default
 then the component id will be "batmmintonCoach"*/
