@@ -7,16 +7,38 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+<context:property-placeholder location="classpath:tryInjection.properties"/>
 <bean id="getMorning"
       class="com.myself.spring.GoodMorningGreeting">
 </bean>
 <bean id="getInstruction"
       class="com.myself.spring.InstructLearnSpring">
 </bean>
+<bean id="getAfternoon"
+      class="com.myself.spring.GoodAfternoonGreeting">
+</bean>
+<bean id="instructCode"
+      class="com.myself.spring.InstructCodeInSpringEnv">
+</bean>
 <bean id="combine"
       class="com.myself.spring.Combine">
+      <!-- set up constructor injection -->
       <constructor-arg ref="getMorning"/>
       <constructor-arg ref="getInstruction"/>
       
+</bean>
+<bean id="combineSetter"
+      class="com.myself.spring.CombineSetter">
+      <!-- set up setter injection -->
+      <property name="goodAfternoonGreeting" ref="getAfternoon" />
+      <property name="instructCodeInSpringEnv" ref="instructCode" />
+      
+      
+      <!-- inject literal values -->
+      <property name="emailAddress" value="jafarsadikdev@gmail.com"/>
+      <property name="contact" value="+880176******"/>
+      <!-- inject from properties file -->
+      <property name="emailAddress2" value="${foo.email}"/>
+      <property name="contact2" value="${foo.contact}"/>
 </bean>
 </beans>
