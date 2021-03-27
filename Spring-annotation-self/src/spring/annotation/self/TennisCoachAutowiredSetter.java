@@ -8,7 +8,7 @@ public class TennisCoachAutowiredSetter implements CoachAutowiredConstructor {
 
 	private FortuneService fortuneService;
 
-	public TennisCoachAutowiredSetter() {
+	TennisCoachAutowiredSetter() {
 		System.out.println(">> TennisCoachAutowiredSetter: inside default constructor");
 	}
 

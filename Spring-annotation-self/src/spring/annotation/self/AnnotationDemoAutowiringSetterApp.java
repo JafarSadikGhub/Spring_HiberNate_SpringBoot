@@ -6,8 +6,13 @@ public class AnnotationDemoAutowiringSetterApp {
 
 	public static void main(String[] args) {
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-
-		CoachAutowiredConstructor theCoach = context.getBean("tennisCoachAutowiredSetter",
+		// For setter method.......
+		/*
+		 * CoachAutowiredConstructor theCoach =
+		 * context.getBean("tennisCoachAutowiredSetter",
+		 * CoachAutowiredConstructor.class);
+		 */
+		CoachAutowiredConstructor theCoach = context.getBean("tennisCoachAutowiredFieldInjection",
 				CoachAutowiredConstructor.class);
 		System.out.println(theCoach.getDailyWorkout());
 		System.out.println(theCoach.getDailyFortune());

@@ -10,6 +10,7 @@ public class TennisCoachAutowiredConstructor implements CoachAutowiredConstructo
 
 	@Autowired
 	public TennisCoachAutowiredConstructor(FortuneService fortuneService) {
+		System.out.println("Inside Test");
 		this.fortuneService = fortuneService;
 	}
 
