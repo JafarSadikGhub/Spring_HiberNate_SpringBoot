@@ -1,14 +1,11 @@
 package spring.annotation.self;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
-@Component
+//@Component
 public class TennisCoachAutowiredConstructor implements CoachAutowiredConstructor {
 
 	private FortuneService fortuneService;
 
-	@Autowired
+	// @Autowired
 	public TennisCoachAutowiredConstructor(FortuneService fortuneService) {
 		System.out.println("Inside Test");
 		this.fortuneService = fortuneService;

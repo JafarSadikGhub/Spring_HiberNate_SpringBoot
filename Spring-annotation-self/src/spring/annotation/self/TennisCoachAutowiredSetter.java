@@ -1,9 +1,8 @@
 package spring.annotation.self;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class TennisCoachAutowiredSetter implements CoachAutowiredConstructor {
 
 	private FortuneService fortuneService;

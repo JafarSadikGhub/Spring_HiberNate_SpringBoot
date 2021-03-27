@@ -1,16 +1,13 @@
 package spring.annotation.self;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
-@Component
+//@Component
 public class TennisCoachAutowiredFieldInjection implements CoachAutowiredConstructor {
 
 	public TennisCoachAutowiredFieldInjection() {
 		System.out.println(">> Inside Field Injection Constructor");
 	}
 
-	@Autowired
+	// @Autowired
 	private FortuneService fortuneService;
 
 	@Override
